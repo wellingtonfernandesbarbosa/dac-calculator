@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('./fonts/GothamFont/GothamFont.css');
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --font-clicker: 'Clicker Script', cursive;
+  --font-gotham-pro: 'Gotham Pro', sans-serif;
+  --font-gotham-pro-bold: 'Gotham Pro Bold', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --primary-color: #f1f1f1;
+  --secondary-color-1: #ddfffd;
+  --secondary-color-2: #ffe2ba;
+  --tertiary-color-1: #fa9617;
+  --tertiary-color-2: #431711;
+
+  --max-width: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: var(--secondary-color);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
