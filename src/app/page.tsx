@@ -88,7 +88,7 @@ const Home = () => {
         </select>
       </div>
 
-      {valorBolo !== null && <h2 className={styles.result}>Valor do bolo: R$ {valorBolo.toFixed(2).replace(".", ",")}.</h2>}
+      {valorBolo !== null && valorBolo > 0 && <h2 className={styles.result}>Valor do bolo: R$ {valorBolo.toFixed(2).replace(".", ",")}</h2>}
     </div>
   );
 };
