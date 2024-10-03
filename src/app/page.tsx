@@ -44,32 +44,32 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Calculadora de Bolo</h1>
-
+      <h1 className={styles.title1}>Calculadora de Bolo</h1>
+      
       <div>
-        <h2>Tipos de Bolo</h2>
-        <select onChange={(e) => setTipoBolo(parseInt(e.target.value))}>
+        <h2 className={styles.title2}>Tipos de Bolo</h2>
+        <select className={styles.select} onChange={(e) => setTipoBolo(parseInt(e.target.value))}>
           <option value="1">Naked Cake</option>
           <option value="2">Bolo Decorado</option>
         </select>
       </div>
 
       <div>
-        <h2>Quantidade de Fatias</h2>
-        <input type="number" value={quantidadeFatia} onChange={(e) => setQuantidadeFatia(parseInt(e.target.value))} />
+        <h2 className={styles.title2}>Quantidade de Fatias</h2>
+        <input className={styles.input} type="number" value={quantidadeFatia} onChange={(e) => setQuantidadeFatia(parseInt(e.target.value))} />
       </div>
 
       <div>
-        <h2>Tipos de Recheio</h2>
-        <select onChange={(e) => setTipoRecheio(parseInt(e.target.value))}>
+        <h2 className={styles.title2}>Tipos de Recheio</h2>
+        <select className={styles.select} onChange={(e) => setTipoRecheio(parseInt(e.target.value))}>
           <option value="1">1 camada de mousse + 1 camada gourmet</option>
           <option value="2">2 camadas de recheio gourmet</option>
         </select>
       </div>
 
       <div>
-        <h2>Recheio Premium</h2>
-        <select onChange={(e) => setRecheioPremium(parseInt(e.target.value))}>
+        <h2 className={styles.title2}>Recheio Premium</h2>
+        <select className={styles.select} onChange={(e) => setRecheioPremium(parseInt(e.target.value))}>
           <option value="0">Nenhum</option>
           <option value="5">Banana - R$5</option>
           <option value="7">Ganache - R$7</option>
@@ -79,8 +79,8 @@ const Home = () => {
       </div>
 
       <div>
-        <h2>Acréscimos</h2>
-        <select onChange={(e) => setAcrescimo(parseInt(e.target.value))}>
+        <h2 className={styles.title2}>Acréscimos</h2>
+        <select className={styles.select} onChange={(e) => setAcrescimo(parseInt(e.target.value))}>
           <option value="0">Nenhum</option>
           <option value="7">Abacaxi - R$7</option>
           <option value="7">Morango - R$7</option>
@@ -88,7 +88,7 @@ const Home = () => {
         </select>
       </div>
 
-      {valorBolo !== null && <h2>Valor do bolo: R$ {valorBolo.toFixed(2).replace(".", ",")}</h2>}
+      {valorBolo !== null && <h2 className={styles.result}>Valor do bolo: R$ {valorBolo.toFixed(2).replace(".", ",")}.</h2>}
     </div>
   );
 };
